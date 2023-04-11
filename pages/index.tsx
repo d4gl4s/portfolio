@@ -9,30 +9,71 @@ gsap.registerPlugin(CustomEase)
 export default function Home() {
   const main = useRef<HTMLElement>(null)
   const tl = useRef<GSAPTimeline>()
+  const greenAnimation = useRef<GSAPTimeline>()
 
   useEffect(() => {
     let ctx = gsap.context(() => {
       tl.current = gsap
         .timeline()
-        /* .from(".name", { x: 60, opacity: 0, ease: CustomEase.create("custom", "M0,0 C0.083,0.294 0.17,0.638 0.436,0.828 0.567,0.921 0.752,1 1,1 "), duration: 0.1 }) */
         .from("#name", { y: "100%", ease: "power3.out", duration: 1.4, stagger: 0.2 })
-        .from(".description", { x: 80, opacity: 0, ease: "power2.out", duration: 1.6, stagger: 0.4 }, "-=0.7")
+        .from(".description", { x: 80, opacity: 0, ease: "power2.out", duration: 1.6, stagger: 0.2 }, "-=0.8")
         .from(".socials", { y: 15, opacity: 0, ease: "power2.out", duration: 1.6, stagger: 0.4 }, "-=1.4")
-        .from(".projects", { y: 25, opacity: 0, ease: "power2.out", duration: 1.6, stagger: 0.2 }, "-=2")
-      /* .from(".farLeft", { x: 230, ease: CustomEase.create("custom", "M0,0 C0.083,0.294 0.17,0.638 0.436,0.828 0.567,0.921 0.752,1 1,1 "), duration: 1.1 }, "-=1.1")
-        .from(".farRight", { x: -230, ease: CustomEase.create("custom", "M0,0 C0.083,0.294 0.17,0.638 0.436,0.828 0.567,0.921 0.752,1 1,1 "), duration: 1.1 }, "-=1.1")
-        .from(".square", {š
-          rx: 70,
-          ease: "power1.out",
-          duration: 2,
-        })
-        .from(".logoName", { opacity: 0, y: 40, rotation: 4, scale: 0.98, ease: "power2.out", duration: 2.3 }, "-=1")
-        .from(".logo", { y: 180, scale: 1.3, ease: "power2.out", duration: 1.6 }, "-=1")
-        .from(".hiddenHeading", { y: "100%", ease: "power3.out", duration: 1.4, stagger: 0.2 }, "-=0.4")
-        .from(".text", { x: 100, opacity: 0, ease: "power2.out", duration: 1.6, delay: 0.5, stagger: 0.2 }, "-=1.3") */
+        .from(".projects", { y: 25, opacity: 0, ease: "power2.out", duration: 1.6, stagger: 0.3 }, "-=2")
+
+      const time = 0.8
+      const prefire = "-=0.3"
+      greenAnimation.current = gsap
+        .timeline({ repeat: -1 /* yoyo: true */ /* , paused: true */ })
+        .to("#greenBall", { x: -300, ease: "power2.out", duration: time })
+        .to("#slab1", { rotation: -90, transformOrigin: "left 50%", ease: "power2.out", duration: time }, prefire)
+        .to("#slab2", { x: 300, ease: "power2.out", duration: time }, prefire)
+        .to("#greenBall", { y: 300, ease: "power2.out", duration: time }, prefire)
+        .to("#slab1", { x: -300, ease: "power2.out", duration: time }, prefire)
+        .to("#slab2", { rotation: -90, transformOrigin: "50% top", ease: "power2.out", duration: time }, prefire)
+        .to("#greenBall", { x: 0, ease: "power2.out", duration: time }, prefire)
+        .to("#slab1", { rotation: -180, transformOrigin: "left 50%", ease: "power2.out", duration: time }, prefire)
+        .to("#slab2", { rotation: -180, transformOrigin: "50% top", ease: "power2.out", duration: time }, prefire)
+        .to("#greenBall", { x: 300, ease: "power2.out", duration: time }, prefire)
+        .to("#slab1", { rotation: -270, transformOrigin: "left 50%", ease: "power2.out", duration: time }, prefire)
+        .to("#slab2", { x: 0, ease: "power2.out", duration: time }, prefire)
+        .to("#greenBall", { y: 0, ease: "power2.out", duration: time }, prefire)
+        .to("#slab1", { x: 0, ease: "power2.out", duration: time }, prefire)
+        .to("#slab2", { rotation: -270, transformOrigin: "50% top", ease: "power2.out", duration: time }, prefire)
+        .to("#greenBall", { x: 0, ease: "power2.out", duration: time }, prefire)
+        .to("#slab1", { rotation: -360, transformOrigin: "left 50%", ease: "power2.out", duration: time }, prefire)
+        .to("#slab2", { rotation: -360, transformOrigin: "50% top", ease: "power2.out", duration: time }, prefire)
+        .timeScale(0) //Vahalik ainult sujuva peatumise jaoks
     }, main)
     return () => ctx.revert()
   }, [])
+
+  /* const chooseAnimation = () => {
+    if (tl.current!.reversed()) {
+      tl.current!.play()
+    } else {
+      tl.current!.reverse()
+    }
+  } */
+  const onHoverEnter = () => {
+    greenAnimation.current!.play()
+    gsap.to(greenAnimation.current!, {
+      timeScale: 1,
+      duration: 0,
+      overwrite: true,
+    })
+  }
+  const onHoverLeave = () => {
+    gsap.to(greenAnimation.current!, {
+      timeScale: 0,
+      duration: 0.2,
+      overwrite: true,
+      onComplete() {
+        greenAnimation.current!.pause()
+      },
+    })
+
+    /* greenAnimation.current!.pause() */ //nii saab kui pole timescale'i timeline'i juures ning algul on timeline'ile pandud pause  = true
+  }
 
   return (
     <>
@@ -42,7 +83,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="favicon/favicon.ico" />
       </Head>
-      <main ref={main} className="mt-[10svh] md:mt-[15svh] flex flex-col md:flex-row w-[90%] md:w-[88%] 2xl:w-[80%] m-auto">
+      <main ref={main} className="mt-[10svh] md:mt-[15svh] flex flex-col md:flex-row w-[90%] sm:w-[70%] md:w-[88%] 2xl:w-[80%] m-auto">
         <div className="mt-10 md:mt-0 md:fixed md:w-[20%]  md:h-[75svh] md:max-w-[230px] 2xl:max-w-[300px] text-[0.9em] 2xl:text-[1em] flex flex-col justify-between">
           <div>
             <h1 className="relative overflow-hidden h-6 mb-8 z-20">
@@ -55,7 +96,7 @@ export default function Home() {
             </h1> */}
             <h2 className="text-justify font-[500]">
               <span className="description">Hi! My name is Daglas Aitsen. I am currently studying Computer Science in University of Tartu and this is my awesome website.</span> <br />
-              <br /> <span className="description">Make sure to check out some of the projects I{"'"}ve been working on!</span>
+              <br /> <span className="description">Make sure to check out some of the projects I{"'"}ve had the chance to work on!</span>
             </h2>
           </div>
           <div className="flex justify-end md:justify-start mt-6 md:mt-0">
@@ -67,27 +108,31 @@ export default function Home() {
             </a>
           </div>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-5	w-full md:w-[55%] 2xl:w-[45%] m-auto md:ml-[30%] mt-20 md:mt-14 mb-64 unselectable">
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5	w-full md:w-[70%] xl:w-[55%] 2xl:w-[45%] m-auto md:ml-[30%] mt-20 md:mt-14 mb-64 unselectable">
           <div className="projects">
             <Link href="/energianumbrid">
-              <svg viewBox="0 0 900 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <svg viewBox="0 0 900 600" fill="none" xmlns="http://www.w3.org/2000/svg" onMouseEnter={onHoverEnter} onMouseLeave={onHoverLeave}>
                 <rect width="900" height="600" fill="#9ADDAD" />
                 <path
+                  id="slab2"
                   d="M29 300C12.9838 300 -0.145559 313.015 1.3998 328.956C8.08243 397.892 38.4736 462.738 87.868 512.132C144.129 568.393 220.435 600 300 600C379.565 600 455.871 568.393 512.132 512.132C561.526 462.738 591.918 397.893 598.6 328.956C600.146 313.015 587.016 300 571 300L300 300L29 300Z"
                   fill="#D2FFDE"
                 />
                 <path
+                  id="slab1"
                   d="M600 571C600 587.016 613.015 600.146 628.956 598.6C697.892 591.918 762.738 561.526 812.132 512.132C868.393 455.871 900 379.565 900 300C900 220.435 868.393 144.129 812.132 87.868C762.738 38.4737 697.892 8.08247 628.956 1.39983C613.015 -0.145531 600 12.9838 600 29L600 300L600 571Z"
                   fill="#D2FFDE"
                 />
-                <circle cx="450" cy="150" r="150" fill="#4D948F" />
+                <circle id="greenBall" cx="450" cy="150" r="150" fill="#4D948F" />
               </svg>
             </Link>
-            <h2 className="mt-2 2xl:text-[1.1em]">
+            <h2 className="mt-2 2xl:text-[1.1em]" /*  onMouseEnter={onHoverEnter} onMouseLeave={onHoverLeave} */>
               <Link href="/energianumbrid">Energianumbrid</Link>
             </h2>
             <p className="projectYear">2023</p>
           </div>
+
           <div className="projects">
             <svg viewBox="0 0 900 600" fill="none" xmlns="http://www.w3.org/2000/svg">
               <rect width="900" height="600" fill="#F8878D" />
@@ -98,9 +143,10 @@ export default function Home() {
               />
             </svg>
 
-            <h2 className="mt-2 2xl:text-[1.1em]">Energianumbrid</h2>
+            <h2 className="mt-2 2xl:text-[1.1em]">Humbia</h2>
             <p className="projectYear">2023</p>
           </div>
+
           <div className="projects">
             <svg viewBox="0 0 900 600" fill="none" xmlns="http://www.w3.org/2000/svg">
               <rect width="900" height="600" fill="#B1A1F1" />
@@ -115,6 +161,7 @@ export default function Home() {
             <h2 className="mt-2 2xl:text-[1.1em]">Energianumbrid</h2>
             <p className="projectYear">2023</p>
           </div>
+
           <div className="projects">
             <svg viewBox="0 0 900 601" fill="none" xmlns="http://www.w3.org/2000/svg">
               <rect width="900" height="600" fill="#FFE091" />
