@@ -86,8 +86,8 @@ export default function Home() {
       <main ref={main} className="mt-[10svh] md:mt-[15svh] flex flex-col md:flex-row w-[90%] sm:w-[70%] md:w-[88%] 2xl:w-[80%] m-auto">
         <div className="mt-10 md:mt-0 md:fixed md:w-[20%]  md:h-[75svh] md:max-w-[230px] 2xl:max-w-[300px] text-[0.9em] 2xl:text-[1em] flex flex-col justify-between">
           <div>
-            <h1 className="relative overflow-hidden h-6 mb-8 z-20">
-              <span id="name" className="absolute z-20 h-14 font-bold text-[1.2em] font-[poppins]">
+            <h1 className="relative overflow-hidden h-6 mb-8 z-20 bg-green-200">
+              <span id="name" className="absolute z-20 h-14 bg-red-300 font-bold text-[1.2em] font-[poppins]">
                 Daglas Aitsen
               </span>
             </h1>
