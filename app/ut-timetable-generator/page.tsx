@@ -1,9 +1,6 @@
 import ProjectTitle from "../components/ProjectTitle"
 import ProjectDescription from "../components/ProjectDescription"
 import Image from "next/image"
-import formImage from "../../public/timetableGenerator/8.jpg"
-import timetableImage1 from "../../public/timetableGenerator/6.jpg"
-import timetableImage2 from "../../public/timetableGenerator/7.jpg"
 
 const timetableGenerator = () => {
   return (
@@ -39,7 +36,7 @@ const timetableGenerator = () => {
             We used web scraping in Python to collect the data for all 2,700 university courses and stored it in a sorted JSON file. When a user enters a course code, we use binary search to retrieve
             the relevant course information and save it in an array that contains the data of all selected courses.
           </p>
-          <Image className=" rounded-[10px] overflow-hidden mb-8 " alt="form" src={formImage} />
+          <Image className=" rounded-[10px] overflow-hidden mb-8 " width={2000} height={2000} alt="form" src={"/timetableGenerator/8.jpg"} />
           <h1 className=" font-bold text-[1.15em] mb-4 mt-32">2. Generate All Possible Timetable Variations</h1>
           <p className="text-stone-700 text-[0.95em] font-medium  mb-8">
             To generate all possible variations of the timetable, we employ a recursive algorithm. Firstly, we sort the selected courses based on the number of available study groups they offer. If a
@@ -47,8 +44,8 @@ const timetableGenerator = () => {
             study groups to the timetable. In case of conflicting lecture timings, we ensure that only one lecture is included. The algorithm concludes by returning an array that encompasses all the
             distinct possible timetables.
           </p>
-          <Image className=" rounded-[10px] overflow-hidden mb-6" alt="timetable image" src={timetableImage1} />
-          <Image className=" rounded-[10px] overflow-hidden mb-6" alt="timetable image" src={timetableImage2} />
+          <Image className=" rounded-[10px] overflow-hidden mb-6" width={2000} height={2000} alt="timetable image" src={"/timetableGenerator/6.jpg"} />
+          {/* <Image className=" rounded-[10px] overflow-hidden mb-6" width={2000} height={2000} alt="timetable image" src={"/timetableGenerator/7.jpg"} /> */}
           <h1 className=" font-bold text-[1.15em] mb-4 mt-20">Check Out The Project</h1>
           <p className="text-stone-700 text-[0.95em] font-medium  mb-8">
             If you are interested in exploring the project firsthand, you can visit the website{" "}
