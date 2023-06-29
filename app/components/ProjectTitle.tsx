@@ -8,14 +8,12 @@ interface Title {
 
 const ProjectTitle = ({ name, authors, year, website, github }: Title) => {
   return (
-    <div className="mb-20">
+    <div className="mb-20 mt-16 md:mt-32">
       <p className="text-[0.8em] yearColor mb-1">
         {authors} {year}
       </p>
       <div className="flex flex-col xl:flex-row justify-between">
         <h1 className="font-bold leading-[1.2em] text-[1.5em] xl:text-[1.3em] 2xl:text-[1.5em] ">{name}</h1>
-        {/* <span className="ml-2 font-semibold text-[0.8em] yearColor">{year}</span> */}
-
         <div className="text-[0.8em] font-medium flex mt-8 xl:mt-0">
           {website && (
             <a

@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 }
 const timetableGenerator = () => {
   return (
-    <main className="mt-32">
+    <main>
       <div className="w-[90%] max-w-[600px] xl:w-[50%] xl:max-w-[1000px] 2xl:w-[37%] m-auto mb-24">
         <ProjectTitle
           name="University of Tartu timetable generator"

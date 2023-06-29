@@ -12,9 +12,9 @@ export default function Home() {
   return (
     <>
       <main className="mt-[10svh] md:mt-[15svh] flex flex-col md:flex-row w-[90%] sm:w-[70%] md:w-[88%] 2xl:w-[80%] m-auto">
-        <div className="mt-10 md:mt-0 md:fixed md:w-[20%]  md:h-[75svh] md:max-w-[230px] 2xl:max-w-[300px] text-[0.9em] 2xl:text-[1em] flex flex-col justify-between">
+        <div className="mt-5 md:mt-0 md:fixed md:w-[20%]  md:h-[75svh] md:max-w-[230px] 2xl:max-w-[300px] text-[0.9em] 2xl:text-[1em] flex flex-col justify-between">
           <div>
-            <h1 id="name" className="h-14 font-bold text-[1.2em]">
+            <h1 id="name" className="h-14 font-bold text-[1.3em]">
               Daglas Aitsen
             </h1>
             <h2 className=" font-[500]">
@@ -54,7 +54,7 @@ export default function Home() {
           </div>
         </div>
       </main>
-      <footer className="w-full flex justify-center mb-12 text-[0.8em] font-semibold text-gray-300 mt-24">&#169; {new Date().getFullYear()}</footer>
+      <footer className="w-full flex justify-center mb-12 text-[0.8em] font-semibold text-gray-300 md:mt-24">&#169; {new Date().getFullYear()}</footer>
     </>
   )
 }
