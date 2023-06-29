@@ -1,6 +1,7 @@
 import ProjectTitle from "../components/ProjectTitle"
 import ProjectDescription from "../components/ProjectDescription"
 import Image from "next/image"
+import Image1 from "@/public/leffel/image1.jpg"
 
 const timetableGenerator = () => {
   return (
@@ -21,7 +22,7 @@ const timetableGenerator = () => {
             The two most intriguing aspects of the project were designing the game{"'"}s visual interface and creating the algorithm to determine if a shape could be placed at the spot selected by the
             player.
           </p>
-          <Image className="w-full md:w-[70%] m-auto rounded-[10px] overflow-hidden mb-8 " width={1000} height={1000} alt="form" src={"/leffel/1.jpg"} />
+          <Image className="w-full md:w-[70%] m-auto rounded-[10px] overflow-hidden mb-8 " alt="form" src={Image1} />
 
           <h1 className=" font-bold text-[1.15em] mb-4 mt-20">Check Out The Project</h1>
           <p className="text-stone-700 text-[0.95em] font-medium  mb-8">
