@@ -7,11 +7,6 @@ const TimetableGenerator = () => {
   const main2 = useRef<HTMLDivElement>(null)
   const [animationAllowed, setAnimationAllowed] = useState(true)
 
-  const delay = async (time: number) => {
-    await new Promise((resolve: any) => setTimeout(resolve, time)) // 3 sec
-    playAnimation(6000) //3 sec
-  }
-
   const playAnimation = async (time: number) => {
     animation2.current!.play()
     gsap.to(animation2.current!, {
@@ -33,7 +28,6 @@ const TimetableGenerator = () => {
   }
 
   useEffect(() => {
-    /* delay(3000) */
     const interval = setInterval(() => {
       playAnimation(4800)
     }, 20000)
@@ -86,8 +80,6 @@ const TimetableGenerator = () => {
         animation2.current!.pause()
       },
     })
-
-    /* greenAnimation.current!.pause() */ //nii saab kui pole timescale'i timeline'i juures ning algul on timeline'ile pandud pause  = true
   }
   return (
     <div className="projects" ref={main2}>
