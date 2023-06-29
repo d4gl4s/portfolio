@@ -1,3 +1,4 @@
+"use client"
 import Head from "next/head"
 import Link from "next/link"
 import { FaGithub, FaLinkedin } from "react-icons/fa"
@@ -30,10 +31,10 @@ const ProjectHead = ({ name, year, description, tools }: projectHead) => {
   return (
     <header ref={main} className="text-[0.9em] 2xl:text-[1em] mt-[17svh] font-medium">
       <div className="flex mb-5">
-        <h1 className="font-bold text-[1.3em] font-[poppins] mb-4 h-4">{name}</h1>
+        <h1 className="font-bold text-[1.3em]  mb-4 h-4">{name}</h1>
         <span className="ml-2 font-semibold text-[0.7em] mt-[2px] yearColor">{year}</span>
       </div>
-      <p id="description" className="justify mb-7">
+      <p id="description" className="text-justify mb-7">
         {description}
       </p>
       <p className="mb-16 yearColor">{tools}</p>

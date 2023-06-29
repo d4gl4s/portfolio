@@ -1,4 +1,4 @@
-import ProjectHead from "@/components/ProjectHead"
+import ProjectHead from "@/app/components/ProjectHead"
 import Head from "next/head"
 
 const energianumbrid = () => {
