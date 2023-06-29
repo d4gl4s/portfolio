@@ -2,6 +2,13 @@ import ProjectTitle from "../components/ProjectTitle"
 import ProjectDescription from "../components/ProjectDescription"
 import Image from "next/image"
 import Image1 from "@/public/leffel/image1.jpg"
+import { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "Leffel | Daglas Aitsen",
+  description:
+    "Leffel is an original Python game. In the game, two players take turns strategically placing different shapes on the board. The winner is the player with the most points at the end of the game.",
+}
 
 const timetableGenerator = () => {
   return (

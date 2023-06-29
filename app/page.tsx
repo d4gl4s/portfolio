@@ -1,8 +1,12 @@
-import Head from "next/head"
 import { FaGithub, FaLinkedin } from "react-icons/fa"
-import Enegianumbrid from "./components/Enegianumbrid"
 import TimetableGenerator from "./components/TimetableGenerator"
 import Leffel from "./components/Leffel"
+import { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "Daglas Aitsen",
+  description: "My name is Daglas Aitsen. I am currently studying Computer Science at the University of Tartu, and this is my awesome website.",
+}
 
 export default function Home() {
   return (

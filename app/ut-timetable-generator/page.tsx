@@ -3,7 +3,13 @@ import ProjectDescription from "../components/ProjectDescription"
 import Image from "next/image"
 import Image6 from "@/public/timetableGenerator/image6.jpg"
 import Image8 from "@/public/timetableGenerator/image8.jpg"
+import { Metadata } from "next"
 
+export const metadata: Metadata = {
+  title: "Timetable Generator | Daglas Aitsen",
+  description:
+    "When planning the new semester, a situation often arises where you want to take a lot of courses. However, creating an optimal timetable can be difficult. Thats why we created a website that generates timetables for you.",
+}
 const timetableGenerator = () => {
   return (
     <main className="mt-32">
