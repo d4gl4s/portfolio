@@ -57,7 +57,7 @@ const timetableGenerator = () => {
           <h1 className=" font-bold text-[1.15em] mb-4 mt-20">Check Out The Project</h1>
           <p className="text-stone-700 text-[0.95em] font-medium  mb-8">
             If you are interested in exploring the project firsthand, you can visit the website{" "}
-            <a className="underline text-emerald-500" href="https://cs.ut.ee/en/content/student-project-contest" target="_blank">
+            <a className="underline text-emerald-500" href="https://ut-timetable-generator.vercel.app/" target="_blank">
               here
             </a>
             .
