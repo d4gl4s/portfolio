@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 
 const timetableGenerator = () => {
   return (
-    <main className="mt-32">
+    <main>
       <div className="w-[90%] max-w-[600px] xl:w-[50%] xl:max-w-[1000px] 2xl:w-[37%] m-auto mb-24">
         <ProjectTitle name="Original Python game 'Leffel'" authors="Daglas Aitsen, Aleksis Krass" year={2022} github="https://github.com/d4gl4s/projekt"></ProjectTitle>
         <ProjectDescription
