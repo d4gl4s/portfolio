@@ -33,9 +33,9 @@ const Page = () => {
           <br />
           <br /> The user can select a starting point by clicking on a room on the map. After the starting point has been chosen, a destination can be selected. The room numbers of the starting and
           endpoint are stored in React state. After both points are chosen, a function utilizing Dijkstra{"'"}s algorithm finds the shortest path between the selected points and returns an array of
-          nodes on the path. This array is stored in state, triggering a React re-render to reflex the changes. When displaying the path, we iterate through the array, which consists of all the edges.
-          For every edge, we check if both of its connected nodes are present in the returned node array. If this condition is met, we display the SVG path associated with the edge; otherwise, we set
-          the opacity of the path to zero. The same principle applies to the nodes—only if a node exists within the returned array is it rendered.
+          nodes on the path. This array is stored in state, triggering a React re-render to reflect the changes. When displaying the path, we iterate through the array of edges. For every edge, we
+          check if both of its connected nodes are present in the returned node array. If this condition is met, we display the SVG path associated with the edge; otherwise, we set the opacity of the
+          edge to zero. The same principle applies to the nodes—only if a node exists within the returned array is it rendered.
         </p>
 
         <Image className=" rounded-[10px] overflow-hidden mb-8 " alt="form" src={image2} />
