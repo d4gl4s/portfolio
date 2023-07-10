@@ -2,6 +2,7 @@ import { FaGithub, FaLinkedin } from "react-icons/fa"
 import TimetableGenerator from "./components/TimetableGenerator"
 import Leffel from "./components/Leffel"
 import { Metadata } from "next"
+import IndoorPathfinder from "./components/IndoorPathfinder"
 
 export const metadata: Metadata = {
   title: "Daglas Aitsen",
@@ -34,16 +35,10 @@ export default function Home() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5	w-full md:w-[70%] xl:w-[55%] 2xl:w-[45%] m-auto md:ml-[30%] mt-20 md:mt-14 mb-64 unselectable">
           {/* <Enegianumbrid /> */}
+          <IndoorPathfinder />
           <TimetableGenerator />
           <Leffel />
-          <div className="projects">
-            <svg viewBox="0 0 900 600" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect width="900" height="600" fill="#F3F5FC" />
-            </svg>
 
-            <h2 className="mt-2 2xl:text-[1.1em]">Coming Soon...</h2>
-            {/* <p className="projectYear">2023</p> */}
-          </div>
           <div className="projects">
             <svg viewBox="0 0 900 600" fill="none" xmlns="http://www.w3.org/2000/svg">
               <rect width="900" height="600" fill="#F3F5FC" />

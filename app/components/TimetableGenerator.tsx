@@ -41,16 +41,15 @@ const TimetableGenerator = () => {
       <Link href="/ut-timetable-generator">
         <svg viewBox="0 0 900 600" fill="none" xmlns="http://www.w3.org/2000/svg">
           <rect width="900" height="600" fill="#9ADDAD" />
-          <rect id="square2" x="236.496" y="212.409" width="131.387" height="87.5912" rx="31" fill="#4D948F" />
-          <rect id="square4" x="384.307" y="112.774" width="131.387" height="87.5912" rx="31" fill="#4D948F" />
-          <rect id="square8" x="532.117" y="212.409" width="131.387" height="187.226" rx="31" fill="#4D948F" />
-          <rect id="square6" opacity="0.8" x="384.307" y="411.679" width="131.387" height="87.5912" rx="31" fill="#4D948F" />
-          <rect id="square3" x="236.496" y="312.044" width="131.387" height="187.226" rx="31" fill="#D2FFDE" />
-          <rect id="square5" x="384.307" y="212.409" width="131.387" height="187.226" rx="31" fill="#D2FFDE" />
-          <rect id="square7" x="532.117" y="112.774" width="131.387" height="87.5912" rx="31" fill="#D2FFDE" />
-
-          <rect id="square9" x="532.117" y="411.679" width="131.387" height="87.5912" rx="31" fill="#D2FFDE" />
-          <rect id="square1" x="236.496" y="112.774" width="131.387" height="87.5912" rx="31" fill="#D2FFDE" />
+          <rect id="square2" x="236.496" y="212.409" width="131.387" height="87.5912" rx="21" fill="#4D948F" />
+          <rect id="square4" x="384.307" y="112.774" width="131.387" height="87.5912" rx="21" fill="#4D948F" />
+          <rect id="square8" x="532.117" y="212.409" width="131.387" height="187.226" rx="21" fill="#4D948F" />
+          <rect id="square6" x="384.307" y="411.679" width="131.387" height="87.5912" rx="21" fill="#4D948F" />
+          <rect id="square3" x="236.496" y="312.044" width="131.387" height="187.226" rx="21" fill="#D2FFDE" />
+          <rect id="square5" x="384.307" y="212.409" width="131.387" height="187.226" rx="21" fill="#D2FFDE" />
+          <rect id="square7" x="532.117" y="112.774" width="131.387" height="87.5912" rx="21" fill="#D2FFDE" />
+          <rect id="square9" x="532.117" y="411.679" width="131.387" height="87.5912" rx="21" fill="#D2FFDE" />
+          <rect id="square1" x="236.496" y="112.774" width="131.387" height="87.5912" rx="21" fill="#D2FFDE" />
         </svg>
       </Link>
       <h2 className="mt-2 2xl:text-[1.1em]">
