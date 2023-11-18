@@ -1,4 +1,5 @@
 import { FaGithub, FaLinkedin } from "react-icons/fa"
+import { SiLeetcode } from "react-icons/si"
 import TimetableGenerator from "./components/TimetableGenerator"
 import Leffel from "./components/Leffel"
 import { Metadata } from "next"
@@ -29,6 +30,9 @@ export default function Home() {
             </a>
             <a target="_blank" href="https://www.linkedin.com/in/daglas-aitsen-569633178/" rel="noopener noreferrer" className="socials" aria-label="Check out my LinkedIn profile!">
               <FaLinkedin size={30} color="#222129" />
+            </a>
+            <a target="_blank" href="https://leetcode.com/d4gl4s/" rel="noopener noreferrer" className="socials ml-2" aria-label="Check out my LinkedIn profile!">
+              <SiLeetcode size={28} color="#222129" />
             </a>
           </div>
         </div>
