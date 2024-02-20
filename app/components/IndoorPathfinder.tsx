@@ -48,10 +48,10 @@ const IndoorPathfinder = () => {
         </svg>
       </Link>
       <h2 className="mt-2 2xl:text-[1.1em]">
-        <Link href="/pathfinder">Interactive indoor pathfinding in React</Link>
+        <Link href="/pathfinder">Visualizing pathfinding using SVGs</Link>
       </h2>
 
-      <p className="projectYear">2022</p>
+      <p className="projectYear">2023</p>
     </div>
   )
 }

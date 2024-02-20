@@ -4,6 +4,7 @@ import TimetableGenerator from "./components/TimetableGenerator"
 import Leffel from "./components/Leffel"
 import { Metadata } from "next"
 import IndoorPathfinder from "./components/IndoorPathfinder"
+import Housing from "./components/HousingPriceAnalysis"
 
 export const metadata: Metadata = {
   title: "Daglas Aitsen",
@@ -17,10 +18,11 @@ export default function Home() {
         <div className="mt-5 md:mt-0 md:fixed md:w-[20%]  md:h-[75svh] md:max-w-[230px] 2xl:max-w-[300px] text-[0.9em] 2xl:text-[1em] flex flex-col justify-between">
           <div>
             <h1 id="name" className="h-14 font-bold text-[1.3em]">
-              Daglas Aitsen
+              Daglas Aitsen 🌌
             </h1>
             <h2 className=" font-[500]">
-              <span className="description">Hi! My name is Daglas Aitsen. I am currently studying Computer Science at the University of Tartu, and this is my awesome website.</span> <br />
+              <span className="description">Hi! My name is Daglas Aitsen. I am in my second year of studying Computer Science at the University of Tartu, and this is my awesome website.</span>
+              <br />
               <br /> <span className="description">Make sure to check out some of the projects I{"'"}ve had the opportunity to work on!</span>
             </h2>
           </div>
@@ -39,8 +41,9 @@ export default function Home() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5	w-full md:w-[70%] xl:w-[55%] 2xl:w-[45%] m-auto md:ml-[30%] mt-20 md:mt-14 mb-64 unselectable">
           {/* <Enegianumbrid /> */}
-          <IndoorPathfinder />
           <TimetableGenerator />
+          <IndoorPathfinder />
+          <Housing />
           <Leffel />
 
           <div className="projects">
