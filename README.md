@@ -1,13 +1,21 @@
-## Getting Started
+# Personal Portfolio Website 
 
-First, run the development server:
+This repository contains the code for my personal portfolio website, showcasing some of my projects. Built using Next.js.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+## Key Features ✨
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- Responsive design for seamless viewing on desktops, tablets, and mobile devices.
+- Handmade costom SVG animation thumbnails for projects (build with react-spring)
+- Projects gallery with descriptions, images, and links to project repositories or live demos.
+- Customizable and easily extendable codebase for future updates and additions.
+
+## Technologies Used
+
+- Next.js (React)
+- React-spring (costom SVG animations)
+- Typescript
+
+## Check out the website
+
+https://www.daglasaitsen.com/
+
