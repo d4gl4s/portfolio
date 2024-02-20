@@ -30,23 +30,23 @@ const Page = () => {
         <p className=" mb-16">The project achieved third place in the 2023 Delta X Data Projects Competition, which featured a field of over 80 participants.</p>
         <h1 className=" font-bold text-[1.15em] mb-4">Collecting Data</h1>
         <p className=" mb-16">
-          We chose to focus our analysis on Estonia's two largest cities, Tallinn and Tartu, ensuring sufficient data availability. Initially, we obtained geospatial maps for both cities to visualize
-          the data. Additionally, we acquired three distinct time-series datasets to enhance our analysis. The first dataset, scraped using a Python script from Estonia’s leading real estate site,
-          www.kv.ee, provided us with house prices, their locations, and sale dates, categorized by month and district from 2007 to 2023. The second dataset, openly available on the Statistics Estonia
-          website, gave us insight into interest rates in Estonia. Lastly, we utilized data from Statistika Amet, which displayed average salaries in Tallinn and Tartu from 2007 to 2023. By
-          integrating these datasets, we could effectively reflect changes in the housing market.
+          We chose to focus our analysis on Estonia&apos;s two largest cities, Tallinn and Tartu, ensuring sufficient data availability. Initially, we obtained geospatial maps for both cities to
+          visualize the data. Additionally, we acquired three distinct time-series datasets to enhance our analysis. The first dataset, scraped using a Python script from Estonia&apos;s leading real
+          estate site, www.kv.ee, provided us with house prices, their locations, and sale dates, categorized by month and district from 2007 to 2023. The second dataset, openly available on the
+          Statistics Estonia website, gave us insight into interest rates in Estonia. Lastly, we utilized data from Statistika Amet, which displayed average salaries in Tallinn and Tartu from 2007 to
+          2023. By integrating these datasets, we could effectively reflect changes in the housing market.
         </p>
         <h1 className=" font-bold text-[1.15em] mb-4">Time Series Forecasting Using an LSTM Model</h1>
         <p className=" mb-16">
           As my primary contribution to the project involved generating ideas, collecting data, and building the time series forecasting model, I will refrain from delving into the market analysis
-          aspect of our work. For further details, please visit the project's GitHub page.
+          aspect of our work. For further details, please visit the project&apos;s GitHub page.
           <br></br>
           <br></br>
           As the concluding phase of our project, we sought to assess our ability to predict future average housing prices based on the data we had accumulated. After experimenting with a simple ARIMA
           model, I opted for a multivariate Long Short-Term Memory (LSTM) network to capture more intricacies and details from our historical data. The model incorporates housing prices, the number of
           housing advertisements, housing loan interest, and average salary differences over the past 60 months as features, producing a price prediction for the upcoming month. To optimize our
-          model's performance, I conducted a manual grid search to identify the most effective hyperparameter values. The final network comprises 60 input nodes, an LSTM layer with 50 nodes, and two
-          dense layers with 75 and 25 nodes, respectively. The accompanying plot illustrates one-shot forecasts for housing prices over the last 3 years. The average root mean square error for
+          model&apos;s performance, I conducted a manual grid search to identify the most effective hyperparameter values. The final network comprises 60 input nodes, an LSTM layer with 50 nodes, and
+          two dense layers with 75 and 25 nodes, respectively. The accompanying plot illustrates one-shot forecasts for housing prices over the last 3 years. The average root mean square error for
           predictions is 100 €.
           <br></br>
           <br></br>
