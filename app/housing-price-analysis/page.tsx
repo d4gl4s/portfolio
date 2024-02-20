@@ -27,7 +27,7 @@ const Page = () => {
           stack={["Python", "Matplotlib", "Numpy", "Tensorflow"]}
         />
         <h1 className=" font-bold text-[1.15em] mb-4">Delta X competition</h1>
-        <p className=" mb-16">The project achieved third place in the 2023 Delta X Data Projects Competition, which featured a field of over 80 participants.</p>
+        <p className=" mb-16">The project achieved third place in the 2023 Delta X Data Science Projects Competition, which featured a field of over 80 participants.</p>
         <h1 className=" font-bold text-[1.15em] mb-4">Collecting Data</h1>
         <p className=" mb-16">
           We chose to focus our analysis on Estonia&apos;s two largest cities, Tallinn and Tartu, ensuring sufficient data availability. Initially, we obtained geospatial maps for both cities to
