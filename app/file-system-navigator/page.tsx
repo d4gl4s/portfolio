@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   description: "A simple and concise file system navigator built using C++ to explore and interact with your system.",
 }
 const Page = () => {
-  const commands = ["pwd", "cd", "mkdir", "rm", "mv", "cp", "undo/redo"]
+  const commands = ["pwd", "cd", "mkdir", "rm", "mv", "cp"]
   return (
     <main>
       <section className="w-[90%] max-w-[600px] xl:w-[50%] xl:max-w-[1000px] 2xl:w-[37%] m-auto mb-32">
@@ -26,18 +26,16 @@ const Page = () => {
           solution=""
           stack={["C++"]}
         />
-
         <h1 className=" font-bold text-[1.15em] mb-4">Functionality</h1>
         <p>
           The file system navigator is a simple program implemented in C++ as a weekend hobby project. The main aim of this project is to gain more experience programming in C++ and hopefully learn
-          something new about file systems as well. The navigator offers essential file system commands for navigation and management, including:{" "}
-          <span className="flex flex-row flex-wrap inline-flex w-fit">
-            {commands.map((command, i) => (
-              <BashComponent text={command} key={i} />
-            ))}{" "}
-          </span>{" "}
-          and more.
+          something new about file systems as well. The navigator offers essential file system commands for navigation and management, including:
         </p>
+        <div className="flex flex-row flex-wrap inline-flex w-fit mt-6">
+          {commands.map((command, i) => (
+            <BashComponent text={command} key={i} />
+          ))}
+        </div>
       </section>
       <section className=" bg-stone-800 w-full py-24">
         <div className="text-white w-[90%] max-w-[600px] xl:w-[50%] xl:max-w-[1000px] 2xl:w-[37%] m-auto 2xl:w-[37%]">

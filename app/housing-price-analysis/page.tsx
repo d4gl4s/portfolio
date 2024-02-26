@@ -7,8 +7,8 @@ import { Metadata } from "next"
 import Link from "next/link"
 
 export const metadata: Metadata = {
-  title: "Pathfinder | Daglas Aitsen",
-  description: "A pathfinding program that provides a visual representation of the shortest path between two distinct rooms within a building.",
+  title: "Housing Price Analysis | Daglas Aitsen",
+  description: "Using machine learning in Python to analyze the housing and predict the housing prices",
 }
 const Page = () => {
   return (
