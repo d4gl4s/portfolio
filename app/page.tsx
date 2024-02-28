@@ -6,6 +6,7 @@ import { Metadata } from "next"
 import IndoorPathfinder from "./components/IndoorPathfinder"
 import Housing from "./components/HousingPriceAnalysis"
 import FileSystemNav from "./components/FileSystemNavigator"
+import JavaBlog from "./components/JavaBlogAWS"
 
 export const metadata: Metadata = {
   title: "Daglas Aitsen",
@@ -44,18 +45,18 @@ export default function Home() {
           {/* <Enegianumbrid /> */}
           <FileSystemNav />
           <TimetableGenerator />
+          <JavaBlog />
           <IndoorPathfinder />
           <Housing />
           <Leffel />
 
-          <div className="projects">
+          {/*   <div className="projects">
             <svg viewBox="0 0 900 600" fill="none" xmlns="http://www.w3.org/2000/svg">
               <rect width="900" height="600" fill="#F3F5FC" />
             </svg>
 
             <h2 className="mt-2 2xl:text-[1.1em]">Coming Soon...</h2>
-            {/* <p className="projectYear">2023</p> */}
-          </div>
+          </div> */}
         </div>
       </main>
       <footer className="w-full flex justify-center mb-12 text-[0.8em] font-semibold text-gray-300 md:mt-24">&#169; {new Date().getFullYear()}</footer>
