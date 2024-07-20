@@ -24,7 +24,7 @@ const ThumbnailCard = ({ project, layout }: Card) => {
     )
   } else {
     return (
-      <div className="flex mb-4">
+      <div className="flex mb-3">
         <Link href={project.url} className="w-[30%]">
           <Image src={project.svg} height={900} width={600} alt="Project Thumbnail" />
         </Link>

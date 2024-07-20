@@ -59,7 +59,7 @@ const IndoorPathfinder = ({ display, layout }: { display: boolean; layout: Layou
       </div>
     )
   return (
-    <div className="projects flex mb-4">
+    <div className="projects flex mb-3">
       <Link href="/pathfinder" className="w-[30%]">
         <svg viewBox="0 0 900 600" fill="none" xmlns="http://www.w3.org/2000/svg">
           <rect width="900" height="600" fill="#FA898F" />

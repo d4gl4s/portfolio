@@ -13,23 +13,26 @@ const MainContent = () => {
   const [layout, setLayout] = useState<LayoutType>("GRID")
   return (
     <div className="w-full md:w-[70%] xl:w-[60%] 2xl:w-[53%] m-auto md:ml-[27%] mt-16 md:mt-0">
-      <nav className="h-[10vh] max-h-[70px] sticky top-0 w-full glassmorphism">
-        <div className="h-[10vh] max-h-[70px] flex items-center justify-between w-[90%] md:w-[85%] m-auto">
-          <h1 className="capitalize font-medium text-[1.4em]">{filter === "ALL" ? "Latest" : filter.toLowerCase()}</h1>
+      <nav className="h-[10vh] max-h-[50px] md:max-h-[70px] sticky top-0 w-full glassmorphism">
+        <div className="h-[10vh] max-h-[50px] md:max-h-[70px] flex items-center justify-between w-[90%] md:w-[85%] m-auto">
+          <h1 className="capitalize font-medium text-[1.1em] md:text-[1.4em]">{filter === "ALL" ? "Latest" : filter.toLowerCase()}</h1>
           <div className="flex">
-            <ul className="flex mr-10 items-center text-[0.9em] font-medium">
-              <li className={"cursor-pointer mr-4 " + (filter == "ALL" && " underline")} onClick={() => setFilter("ALL")}>
+            <ul className="flex mr-5 md:mr-10 items-center text-[0.85em] md:text-[0.9em] font-medium">
+              <li className={"cursor-pointer mr-4 text-[#736E7E]  " + (filter == "ALL" && " font-semibold text-[#232522]")} onClick={() => setFilter("ALL")}>
                 Latest
               </li>
-              <li className={"cursor-pointer mr-4 " + (filter == "PROJECTS" && " underline")} onClick={() => setFilter("PROJECTS")}>
+              <li className={"cursor-pointer mr-4 text-[#736E7E]  " + (filter == "PROJECTS" && " font-semibold text-[#232522]")} onClick={() => setFilter("PROJECTS")}>
                 Projects
               </li>
-              <li className={"cursor-pointer " + (filter == "BLOG" && " underline")} onClick={() => setFilter("BLOG")}>
+              <li className={"cursor-pointer text-[#736E7E] " + (filter == "BLOG" && " font-semibold text-[#232522]")} onClick={() => setFilter("BLOG")}>
                 Blog
               </li>
             </ul>
-            <button className="bg-black h-7 w-7 rounded-[3px] flex items-center justify-center" onClick={() => setLayout(layout === "GRID" ? "LIST" : "GRID")}>
-              {layout === "LIST" ? <FaGripVertical color="white" size={12} /> : <FaListUl color="white" size={12} />}
+            <button
+              className="bg-[#E8E6EC] h-7 w-7 rounded-[3px] flex items-center justify-center glassmorphism2 border border-solid-1 border-[#E8E6EC]"
+              onClick={() => setLayout(layout === "GRID" ? "LIST" : "GRID")}
+            >
+              {layout === "LIST" ? <FaGripVertical color="#373D37" size={12} /> : <FaListUl color="#373D37" size={12} />}
             </button>
           </div>
         </div>
