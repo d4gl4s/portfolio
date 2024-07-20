@@ -1,8 +1,10 @@
 "use client"
 import Link from "next/link"
 import { useEffect, useState } from "react"
+import TypeAndYear from "./home/TypeAndYear"
+import { LayoutType } from "../types/types"
 
-const IndoorPathfinder = () => {
+const IndoorPathfinder = ({ display, layout }: { display: boolean; layout: LayoutType }) => {
   const [distance, setDistance] = useState(0)
 
   useEffect(() => {
@@ -12,9 +14,53 @@ const IndoorPathfinder = () => {
 
     return () => clearInterval(interval) // This represents the unmount function, in which you need to clear your interval to prevent memory leaks.
   }, [distance])
+  if (!display) return null
+  if (layout == "GRID")
+    return (
+      <div className="projects">
+        <Link href="/pathfinder">
+          <svg viewBox="0 0 900 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="900" height="600" fill="#FA898F" />
+            <path
+              id="path"
+              d="M423.5 357.5L527.156 369.359C536.221 370.396 545.266 367.251 551.732 360.814L622.165 290.692C637.452 275.472 632.161 249.576 612.129 241.573L471.36 185.336C461.528 181.408 450.353 182.954 441.956 189.404L365.066 248.464C356.929 254.714 352.55 264.69 353.459 274.911L361.26 362.68C361.744 368.123 360.732 373.595 358.333 378.505L337.024 422.123C332.634 431.109 324.055 437.316 314.148 438.676L252.183 447.181C238.098 449.114 224.59 440.895 219.832 427.498L210.754 401.929C206.424 389.735 210.401 376.139 220.619 368.2L258.065 339.108C264.713 333.942 273.227 331.808 281.526 333.227L423.5 357.5Z"
+              stroke="#C45166"
+              stroke-width="16"
+              stroke-dashoffset={distance}
+              stroke-dasharray="50 40"
+            />
+            <path
+              d="M195 278.989V128C195 123.029 199.029 119 204 119H402.842C407.813 119 411.842 123.029 411.842 128V155.451C411.842 157.836 410.895 160.124 409.209 161.812L362.751 208.311C361.063 210 358.773 210.95 356.384 210.95H316.669C314.281 210.95 311.991 211.899 310.303 213.589L238.605 285.35C236.917 287.039 234.626 287.989 232.238 287.989H204C199.029 287.989 195 283.959 195 278.989Z"
+              fill="#FFCCCF"
+            />
+            <path
+              d="M538.067 165.347L505.156 134.574C499.192 128.998 503.138 119 511.302 119H695C699.971 119 704 123.029 704 128V219.198C704 225.567 697.565 229.921 691.652 227.552L540.866 167.128C539.83 166.713 538.881 166.109 538.067 165.347Z"
+              fill="#FFCCCF"
+            />
+            <path
+              d="M395.717 280.906L462.735 215.135C465.32 212.599 469.172 211.858 472.512 213.255L589.468 262.176C595.139 264.548 596.816 271.781 592.768 276.406L542.347 334.018C540.434 336.203 537.584 337.332 534.694 337.048L440.176 327.763C438.43 327.591 436.772 326.913 435.407 325.812L396.371 294.336C392.18 290.956 391.874 284.677 395.717 280.906Z"
+              fill="#FFCCCF"
+            />
+            <path
+              d="M318.303 367.343L279.089 359.788C276.495 359.288 273.813 359.953 271.752 361.607L244.622 383.388C241.571 385.838 240.452 389.979 241.855 393.632L249.858 414.475C251.394 418.477 255.541 420.84 259.767 420.122L305.781 412.302C308.731 411.801 311.239 409.865 312.473 407.139L324.8 379.89C327.197 374.59 324.014 368.443 318.303 367.343Z"
+              fill="#FFCCCF"
+            />
+            <path
+              d="M633.798 340.904L572.122 418.586C570.708 420.367 568.672 421.547 566.424 421.888L497.638 432.326C495.014 432.724 492.349 431.944 490.353 430.195L455.649 399.761C453.652 398.011 450.985 397.231 448.36 397.631L381.951 407.746C378.873 408.215 376.255 410.242 375.031 413.105L351.361 468.462C348.822 474.4 353.178 481 359.637 481H695C699.971 481 704 476.971 704 472V346.5C704 341.529 699.971 337.5 695 337.5H640.846C638.1 337.5 635.505 338.753 633.798 340.904Z"
+              fill="#FFCCCF"
+            />
+          </svg>
+        </Link>
+        <h2 className="mt-2 2xl:text-[1.1em]">
+          <Link href="/pathfinder">Visualizing pathfinding using SVGs</Link>
+        </h2>
+
+        <TypeAndYear type="PROJECTS" year={2023} />
+      </div>
+    )
   return (
-    <div className="projects">
-      <Link href="/pathfinder">
+    <div className="projects flex mb-4">
+      <Link href="/pathfinder" className="w-[30%]">
         <svg viewBox="0 0 900 600" fill="none" xmlns="http://www.w3.org/2000/svg">
           <rect width="900" height="600" fill="#FA898F" />
           <path
@@ -47,11 +93,13 @@ const IndoorPathfinder = () => {
           />
         </svg>
       </Link>
-      <h2 className="mt-2 2xl:text-[1.1em]">
-        <Link href="/pathfinder">Visualizing pathfinding using SVGs</Link>
-      </h2>
 
-      <p className="projectYear">2023</p>
+      <div className="w-[70%] ml-4">
+        <h2 className="mt-2 2xl:text-[1.1em]">
+          <Link href="/pathfinder">Visualizing pathfinding using SVGs</Link>
+        </h2>
+        <TypeAndYear type="PROJECTS" year={2023} />
+      </div>
     </div>
   )
 }

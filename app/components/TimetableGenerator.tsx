@@ -2,10 +2,11 @@
 import Link from "next/link"
 import { useRef, useEffect } from "react"
 import { gsap } from "gsap"
+import { FilterOption, LayoutType } from "../types/types"
+import TypeAndYear from "./home/TypeAndYear"
 
-const TimetableGenerator = () => {
+const TimetableGenerator = ({ display, layout }: { display: boolean; layout: LayoutType }) => {
   const main = useRef<HTMLDivElement>(null)
-
   const animation = useRef<GSAPTimeline>()
 
   useEffect(() => {
@@ -36,9 +37,33 @@ const TimetableGenerator = () => {
     return () => ctx.revert()
   }, [])
 
+  if (!display) return null
+  if (layout === "GRID")
+    return (
+      <div className="projects" ref={main}>
+        <Link href="/ut-timetable-generator">
+          <svg viewBox="0 0 900 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="900" height="600" fill="#A5E9B0" />
+            <rect id="square2" x="236.496" y="212.409" width="131.387" height="87.5912" rx="21" fill="#4D948F" />
+            <rect id="square4" x="384.307" y="112.774" width="131.387" height="87.5912" rx="21" fill="#4D948F" />
+            <rect id="square8" x="532.117" y="212.409" width="131.387" height="187.226" rx="21" fill="#4D948F" />
+            <rect id="square6" x="384.307" y="411.679" width="131.387" height="87.5912" rx="21" fill="#4D948F" />
+            <rect id="square3" x="236.496" y="312.044" width="131.387" height="187.226" rx="21" fill="#DEFFEB" />
+            <rect id="square5" x="384.307" y="212.409" width="131.387" height="187.226" rx="21" fill="#DEFFEB" />
+            <rect id="square7" x="532.117" y="112.774" width="131.387" height="87.5912" rx="21" fill="#DEFFEB" />
+            <rect id="square9" x="532.117" y="411.679" width="131.387" height="87.5912" rx="21" fill="#DEFFEB" />
+            <rect id="square1" x="236.496" y="112.774" width="131.387" height="87.5912" rx="21" fill="#DEFFEB" />
+          </svg>
+        </Link>
+        <h2 className="mt-2 2xl:text-[1.1em]">
+          <Link href="/ut-timetable-generator">University of Tartu timetable generator</Link>
+        </h2>
+        <TypeAndYear type="PROJECTS" year={2023} />
+      </div>
+    )
   return (
-    <div className="projects" ref={main}>
-      <Link href="/ut-timetable-generator">
+    <div className="projects flex mb-4" ref={main}>
+      <Link href="/ut-timetable-generator" className="w-[30%]">
         <svg viewBox="0 0 900 600" fill="none" xmlns="http://www.w3.org/2000/svg">
           <rect width="900" height="600" fill="#A5E9B0" />
           <rect id="square2" x="236.496" y="212.409" width="131.387" height="87.5912" rx="21" fill="#4D948F" />
@@ -52,10 +77,12 @@ const TimetableGenerator = () => {
           <rect id="square1" x="236.496" y="112.774" width="131.387" height="87.5912" rx="21" fill="#DEFFEB" />
         </svg>
       </Link>
-      <h2 className="mt-2 2xl:text-[1.1em]">
-        <Link href="/ut-timetable-generator">University of Tartu timetable generator</Link>
-      </h2>
-      <p className="projectYear">2023</p>
+      <div className="w-[70%] ml-4">
+        <h2 className="mt-2 2xl:text-[1.1em]">
+          <Link href="/ut-timetable-generator">University of Tartu timetable generator</Link>
+        </h2>
+        <TypeAndYear type="PROJECTS" year={2023} />
+      </div>
     </div>
   )
 }
