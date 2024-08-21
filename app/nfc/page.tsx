@@ -69,8 +69,8 @@ const NFC = () => {
         <section>
           <h2>2. How Does NFC Work?</h2>
           <p>
-            NFC (Near Field Communication) operates as a sophisticated communication system, facilitating wireless data exchange over short distances. To fully appreciate how NFC works, it's essential
-            to understand its communication modes, the distinction between active and passive devices, and the underlying protocol stack that governs its operation.
+            NFC (Near Field Communication) operates as a sophisticated communication system, facilitating wireless data exchange over short distances. To fully appreciate how NFC works, it&apos;s
+            essential to understand its communication modes, the distinction between active and passive devices, and the underlying protocol stack that governs its operation.
           </p>
           <h3>NFC Communication Modes</h3>
           <p>
@@ -88,8 +88,8 @@ const NFC = () => {
             <li>
               <b>Passive NFC Devices:</b>
               Passive devices, like NFC tags or smart cards, do not generate their own RF field. Instead, they rely on the RF field emitted by an active NFC device. When a passive NFC tag enters the
-              RF field of an active device, it absorbs a small amount of energy through electromagnetic induction, which powers the tag's internal circuitry, enabling it to communicate by modulating
-              the existing field.
+              RF field of an active device, it absorbs a small amount of energy through electromagnetic induction, which powers the tag&apos;s internal circuitry, enabling it to communicate by
+              modulating the existing field.
             </li>
           </ul>
           <h4>Peer-to-Peer (P2P) Mode</h4>
@@ -133,13 +133,13 @@ const NFC = () => {
               <b>Modulation Techniques:</b>
               NFC uses amplitude shift keying (ASK) modulation to encode data onto the RF carrier wave. Specifically, it employs 100% ASK modulation for transmitting data from an active device to a
               passive device, meaning the RF field is completely switched off to represent binary data. In contrast, passive tags use load modulation, a subtler form of modulation, to alter the
-              carrier wave's amplitude just enough for the active device to detect data changes.
+              carrier wave&apos;s amplitude just enough for the active device to detect data changes.
             </li>
             <li>
               <b>Data Encoding:</b>
               Data is encoded using either Manchester or Modified Miller coding schemes, depending on the communication mode. Manchester coding is often used for higher data rates, providing a balance
-              between data integrity and complexity. It works by representing binary '0' and '1' with specific transitions in the signal, which makes it easier for the receiver to synchronize and
-              decode the data.
+              between data integrity and complexity. It works by representing binary &apos;0&apos; and &apos;1&apos; with specific transitions in the signal, which makes it easier for the receiver to
+              synchronize and decode the data.
             </li>
             <li>
               <b>Data Rates:</b>
@@ -223,12 +223,12 @@ const NFC = () => {
           </p>
           <h4>Skimming</h4>
           <p>
-            Skimming involves using an NFC reader to extract information from an NFC-enabled device or card without the owner's consent. This type of attack is particularly concerning in environments
-            where devices are placed in close proximity to each other, such as in crowded public spaces.
+            Skimming involves using an NFC reader to extract information from an NFC-enabled device or card without the owner&apos;s consent. This type of attack is particularly concerning in
+            environments where devices are placed in close proximity to each other, such as in crowded public spaces.
           </p>
           <p>
-            An attacker could use a concealed NFC reader to skim data from unsuspecting victims' devices or contactless cards simply by being within the range. While NFC’s short range limits the scope
-            of such attacks, it does not eliminate them. For instance, attackers might use skimming to harvest payment card information, which can then be used to make unauthorized transactions.
+            An attacker could use a concealed NFC reader to skim data from unsuspecting victims&apos; devices or contactless cards simply by being within the range. While NFC’s short range limits the
+            scope of such attacks, it does not eliminate them. For instance, attackers might use skimming to harvest payment card information, which can then be used to make unauthorized transactions.
           </p>
           <h3>Security Measures and Protocols</h3>
           <p>To counter these threats, several security measures and protocols are implemented in NFC technology:</p>
@@ -267,8 +267,8 @@ const NFC = () => {
         <section>
           <h2>4. NFC Applications: Contactless Payments and Access Control</h2>
           <p>
-            NFC technology has revolutionized various industries, with its most impactful applications seen in contactless payments and access control. These applications leverage NFC's ease of use
-            and robust security features to provide seamless and secure experiences for users.
+            NFC technology has revolutionized various industries, with its most impactful applications seen in contactless payments and access control. These applications leverage NFC&apos;s ease of
+            use and robust security features to provide seamless and secure experiences for users.
           </p>
           <h3>Contactless Payments</h3>
           <p>
