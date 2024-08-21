@@ -1,0 +1,85 @@
+#blogTitle {
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 900;
+}
+
+article {
+  font-size: 1.03em;
+  font-weight: 500;
+}
+
+section h2 {
+  font-weight: 500;
+  font-size: 1.6em;
+  margin-bottom: 1.2em;
+  line-height: 1.2em;
+  font-family: var(--font-dm-sans);
+}
+
+section h3 {
+  font-weight: 700;
+  margin-bottom: 0.8em;
+  margin-top: 1.8em;
+  font-size: 1.3em;
+}
+
+section h4 {
+  font-weight: 700;
+  font-size: 1.2em;
+  margin-bottom: 0.7em;
+  margin-top: 1.5em;
+  font-style: italic;
+}
+
+b {
+  font-weight: 700;
+  margin-right: 0.5em;
+}
+
+section p {
+  margin-bottom: 1em;
+  line-height: 1.5em;
+  color: rgb(62, 67, 62);
+}
+
+section ul {
+  list-style: circle;
+  margin-bottom: 1em;
+}
+
+section li {
+  margin-bottom: 0.5em;
+}
+
+section {
+  width: 90%;
+  max-width: 600px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  line-height: 1.4em;
+  font-family: var(--font-inter);
+  align-items: start;
+  margin-bottom: 3.5rem; /* 12 x 0.25rem */
+
+  /* Styles for xl screens (min-width: 1280px) */
+  @media (min-width: 1280px) {
+    width: 50%;
+    max-width: 1000px;
+  }
+
+  /* Styles for 2xl screens (min-width: 1536px) */
+  @media (min-width: 1536px) {
+    width: 37%;
+  }
+}
+
+::selection {
+  background: #22473e;
+  color: azure;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #22473e;
+  border-radius: 0px;
+}

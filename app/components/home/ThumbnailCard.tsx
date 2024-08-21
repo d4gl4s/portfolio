@@ -13,7 +13,7 @@ const ThumbnailCard = ({ project, layout }: Card) => {
     return (
       <div className="projects">
         <Link href={project.url}>
-          <Image src={project.svg} height={900} width={600} alt="Project Thumbnail" />
+          <Image src={project.image} height={900} width={600} alt="Project Thumbnail" />
         </Link>
         <h2 className="mt-2 2xl:text-[1.1em] capitalize">
           <Link href={project.url}>{project.title}</Link>
@@ -26,7 +26,7 @@ const ThumbnailCard = ({ project, layout }: Card) => {
     return (
       <div className="flex mb-3">
         <Link href={project.url} className="w-[30%]">
-          <Image src={project.svg} height={900} width={600} alt="Project Thumbnail" />
+          <Image src={project.image} height={900} width={600} alt="Project Thumbnail" />
         </Link>
         <div className="w-[70%] ml-4">
           <h2 className="2xl:text-[1.1em] capitalize">

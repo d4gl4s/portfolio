@@ -37,11 +37,6 @@ const MainContent = () => {
           </div>
         </div>
       </nav>
-      {filter == "BLOG" && (
-        <div className="w-[85%] m-auto mt-16">
-          No blog posts are currently available 🤒. I recently came up with the idea for this blog. Future posts will cover topics I find interesting, with a focus on technical content.
-        </div>
-      )}
       <div className={"m-auto mb-64 unselectable w-[90%] md:w-[85%] " + (layout === "GRID" ? " grid grid-cols-1 md:grid-cols-2 gap-5" : " flex flex-col")}>
         {projectThumbnails.map((project: ProjectThumbnail, i: number) =>
           project.url === "/ut-timetable-generator" ? (
