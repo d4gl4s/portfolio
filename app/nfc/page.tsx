@@ -44,7 +44,7 @@ const NFC = () => {
         <section>
           <h2>1. Understanding Radio Frequencies</h2>
           <p>
-            NFC technology is deeply rooted in the principles of radio frequency (RF) communication, a subset of electromagnetic waves. Radio frequencies encompass a broad range of waveforms, from
+            NFC technology is deeply rooted in the principles of radio frequency (RF) communication, a subset of electromagnetic waves. Electromagnetic waves encompass a broad range of waveforms, from
             low-frequency radio waves to high-frequency gamma rays. Specifically, RF refers to the portion of the electromagnetic spectrum that ranges from 3 kHz to 300 GHz. These electromagnetic
             waves are capable of carrying energy and information across distances without the need for physical connections. NFC operates at 13.56 MHz within the high-frequency (HF) band of the RF
             spectrum. This specific frequency is chosen for its ability to balance energy transfer and data integrity, making it ideal for short-range communication.
