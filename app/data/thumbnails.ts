@@ -34,7 +34,8 @@ export const projectThumbnails: ProjectThumbnail[] = [
     type: "BLOG",
     year: 2024,
     url: "/nfc",
-    image: "/thumbnails/nfc.svg",
+    image: "/thumbnails/nfc.png",
+    imageLarge: "thumbnails/nfc.svg",
     imageAuthor: "me",
   },
   /* {

@@ -9,6 +9,7 @@ export interface ProjectThumbnail {
   year: number
   url: string
   image: any
+  imageLarge?: any
   imageAuthor?: string
   imageInspiredBy?: string
   description?: string

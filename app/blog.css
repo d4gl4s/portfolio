@@ -31,11 +31,6 @@ section h4 {
   font-style: italic;
 }
 
-b {
-  font-weight: 700;
-  margin-right: 0.5em;
-}
-
 section p {
   margin-bottom: 1em;
   line-height: 1.5em;
@@ -45,10 +40,18 @@ section p {
 section ul {
   list-style: circle;
   margin-bottom: 1em;
+  margin-left: 1.4em;
 }
 
 section li {
   margin-bottom: 0.5em;
+  color: rgb(62, 67, 62);
+}
+
+b {
+  font-weight: 700;
+  margin-right: 0.5em;
+  color: rgb(18, 19, 18);
 }
 
 section {
@@ -82,4 +85,9 @@ section {
 ::-webkit-scrollbar-thumb {
   background: #22473e;
   border-radius: 0px;
+}
+
+/*Scrollbar*/
+::-webkit-scrollbar {
+  width: 10px;
 }
