@@ -5,12 +5,21 @@ import MainContent from "./components/home/MainContent"
 export const metadata: Metadata = {
   title: "Daglas Aitsen",
   description: "My name is Daglas Aitsen. I am currently studying Computer Science at the University of Tartu, and this is my awesome website.",
+  keywords: ["NFC", "Security", "Radio Frequencies"],
+  creator: "Daglas Aitsen",
+  openGraph: {
+    type: "website",
+    url: "https://daglasaitsen.com",
+    siteName: "daglasaitsen.com",
+    title: "Daglas Aitsen",
+    description: "description",
+    images: [{ url: "https://g.delfi.ee/pr/og/delfi_1200x628.png", width: 1200, height: 628 }],
+  },
   twitter: {
     card: "summary_large_image",
-    title: "NFC technology: From Radio Waves to Secure Digital Interactions",
-    description:
-      "Near Field Communication (NFC) is a short-range wireless communication technology that enables seamless communication between devices with a simple tap or wave. This technology is the backbone of many modern conveniences, from the effortless payments we make with our smartphones to the secure access we gain with a single swipe of an NFC-enabled card.",
-    creator: "@d4gl4s",
+    title: "NFC technology",
+    description: "Near Field Communication (NFC) is a short-range wireless.",
+    images: [{ url: "https://g.delfi.ee/pr/og/delfi_1200x628.png", alt: "Blog post thumbnail", width: 1200, height: 628 }],
   },
 }
 
