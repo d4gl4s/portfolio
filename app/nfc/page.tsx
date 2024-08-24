@@ -8,37 +8,25 @@ import { useState, useEffect } from "react"
 import { ProjectThumbnail } from "../types/types"
 import { title } from "process"
 
-/* export const metadata: Metadata = {
-  title: "",
-  referrer: "origin-when-cross-origin",
+export const metadata: Metadata = {
+  title: "NFC technology | Daglas Aitsen",
+  description: "description",
   keywords: ["NFC", "Security", "Radio Frequencies"],
-  authors: [{ name: "Daglas Aitsen", url: "https://daglasaitsen.com" }],
   creator: "Daglas Aitsen",
-  description:
-    "Near Field Communication (NFC) is a short-range wireless communication technology that enables seamless communication between devices with a simple tap or wave. This technology is the backbone of many modern conveniences, from the effortless payments we make with our smartphones to the secure access we gain with a single swipe of an NFC-enabled card.",
   openGraph: {
+    type: "website",
+    url: "https://daglasaitsen.com/nfc",
+    siteName: "daglasaitsen.com",
     title: "NFC technology: From Radio Waves to Secure Digital Interactions",
-    description:
-      "Near Field Communication (NFC) is a short-range wireless communication technology that enables seamless communication between devices with a simple tap or wave. This technology is the backbone of many modern conveniences, from the effortless payments we make with our smartphones to the secure access we gain with a single swipe of an NFC-enabled card.",
-    type: "article",
-    publishedTime: "2024-08-21T00:00:00.000Z",
-    authors: ["Daglas Aitsen"],
+    description: "description",
   },
   twitter: {
     card: "summary_large_image",
     title: "NFC technology: From Radio Waves to Secure Digital Interactions",
-    description:
-      "Near Field Communication (NFC) is a short-range wireless communication technology that enables seamless communication between devices with a simple tap or wave. This technology is the backbone of many modern conveniences, from the effortless payments we make with our smartphones to the secure access we gain with a single swipe of an NFC-enabled card.",
+    site: "@d4gl4s",
     creator: "@d4gl4s",
-    images: [{ url: "https://www.daglasaitsen.com/_next/image?url=%2Fjava-blog%2Fthumbnail.png&w=1200&q=75", alt: "Blog post thumbnail", width: 900, height: 600 }],
+    description: "Near Field Communication (NFC) is a short-range wireless.",
   },
-} */
-
-export const metadata = {
-  title: "NFC Tehnology | Daglas Aitsen",
-  description:
-    "Near Field Communication (NFC) is a short-range wireless communication technology that enables seamless communication between devices with a simple tap or wave. This technology is the backbone of many modern conveniences, from the effortless payments we make with our smartphones to the secure access we gain with a single swipe of an NFC-enabled card.",
-  creator: "Daglas Aitsen",
 }
 
 const NFC = () => {
