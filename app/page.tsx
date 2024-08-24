@@ -5,6 +5,7 @@ import MainContent from "./components/home/MainContent"
 export const metadata: Metadata = {
   title: "Daglas Aitsen",
   description: "My name is Daglas Aitsen. I am currently studying Computer Science at the University of Tartu, and this is my awesome website.",
+
   keywords: ["NFC", "Security", "Radio Frequencies"],
   creator: "Daglas Aitsen",
   openGraph: {
@@ -18,6 +19,8 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "NFC technology",
+    site: "@d4gl4s",
+    creator: "@d4gl4s",
     description: "Near Field Communication (NFC) is a short-range wireless.",
     images: [{ url: "https://g.delfi.ee/pr/og/delfi_1200x628.png", alt: "Blog post thumbnail", width: 1200, height: 628 }],
   },
