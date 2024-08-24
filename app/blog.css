@@ -4,8 +4,8 @@
 }
 
 article {
-  font-size: 1.03em;
-  font-weight: 500;
+  font-size: 1.05em;
+  font-weight: 400;
 }
 
 section h2 {
@@ -35,6 +35,7 @@ section p {
   margin-bottom: 1em;
   line-height: 1.5em;
   color: rgb(62, 67, 62);
+  font-family: var(--font-geist-sans);
 }
 
 section ul {

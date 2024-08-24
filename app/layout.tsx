@@ -1,5 +1,6 @@
 import "./globals.css"
 import { Poppins, Inter, DM_Sans } from "next/font/google"
+import { GeistSans } from "geist/font/sans"
 import { Analytics } from "@vercel/analytics/react"
 import { url } from "inspector"
 
@@ -32,7 +33,7 @@ export const metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body suppressHydrationWarning={true} className={`${inter.variable} ${poppins.variable} ${dm_sans.variable}`}>
+      <body suppressHydrationWarning={true} className={`${GeistSans.variable} ${inter.variable} ${poppins.variable} ${dm_sans.variable}`}>
         {children}
         <Analytics />
       </body>

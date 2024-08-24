@@ -6,6 +6,7 @@ import BlogFooter from "../components/blog/BlogFooter"
 import Head from "next/head"
 import { useState, useEffect } from "react"
 import { ProjectThumbnail } from "../types/types"
+import { title } from "process"
 
 /* export const metadata: Metadata = {
   title: "",
@@ -33,6 +34,13 @@ import { ProjectThumbnail } from "../types/types"
   },
 } */
 
+export const metadata = {
+  title: "NFC Tehnology | Daglas Aitsen",
+  description:
+    "Near Field Communication (NFC) is a short-range wireless communication technology that enables seamless communication between devices with a simple tap or wave. This technology is the backbone of many modern conveniences, from the effortless payments we make with our smartphones to the secure access we gain with a single swipe of an NFC-enabled card.",
+  creator: "Daglas Aitsen",
+}
+
 const NFC = () => {
   const post = projectThumbnails.filter((post) => post.title === "NFC technology: From Radio Waves to Secure Digital Interactions")[0]
   if (!post) return null // Render nothing or a loading state if the post is not found yet
@@ -40,7 +48,7 @@ const NFC = () => {
   return (
     <main>
       <article>
-        <BlogTitle post={projectThumbnails.filter((post) => post.title === "NFC technology: From Radio Waves to Secure Digital Interactions")[0]} />
+        <BlogTitle post={post} />
         <section>
           <h2>1. Understanding Radio Frequencies</h2>
           <p>
