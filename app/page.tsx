@@ -5,6 +5,13 @@ import MainContent from "./components/home/MainContent"
 export const metadata: Metadata = {
   title: "Daglas Aitsen",
   description: "My name is Daglas Aitsen. I am currently studying Computer Science at the University of Tartu, and this is my awesome website.",
+  twitter: {
+    card: "summary_large_image",
+    title: "NFC technology: From Radio Waves to Secure Digital Interactions",
+    description:
+      "Near Field Communication (NFC) is a short-range wireless communication technology that enables seamless communication between devices with a simple tap or wave. This technology is the backbone of many modern conveniences, from the effortless payments we make with our smartphones to the secure access we gain with a single swipe of an NFC-enabled card.",
+    creator: "@d4gl4s",
+  },
 }
 
 export default function Home() {
