@@ -1,5 +1,4 @@
 import { ProjectThumbnail } from "@/app/types/types"
-import { Content } from "next/font/google"
 import Image from "next/image"
 import ScrollBar from "./ScrollBar"
 import ShareButtons from "./ShareButtons"
@@ -23,8 +22,8 @@ const BlogTitle = ({ post }: { post: ProjectThumbnail }) => {
           </div> */}
           <ShareButtons title={post.title} />
         </div>
-        <div className="w-full max-w-[550px]">
-          <Image src={post.imageLarge ? post.imageLarge : post.image} height={900} width={600} alt="Project Thumbnail" className="unselectable rounded" />
+        <div className="w-full max-w-[650px]">
+          <Image unoptimized={true} src={post.imageLarge} height={1500} width={750} alt="Project Thumbnail" className="unselectable rounded" priority />
           <p className="text-start md:text-end mt-2 text-[0.9em] font-medium text-[#BEC5DE]">
             {post.imageAuthor && "Illustrated by " + post.imageAuthor + " "}
             {post.imageAuthor && post.imageInspiredBy && "inspired by " + post.imageInspiredBy}

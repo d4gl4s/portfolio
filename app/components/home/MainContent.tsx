@@ -18,13 +18,22 @@ const MainContent = () => {
           <h1 className="capitalize font-medium text-[1.1em] md:text-[1.4em]">{filter === "ALL" ? "Latest" : filter.toLowerCase()}</h1>
           <div className="flex">
             <ul className="flex mr-5 md:mr-10 items-center text-[0.85em] md:text-[0.9em] font-medium">
-              <li className={"cursor-pointer mr-4 text-[#736E7E]  " + (filter == "ALL" && " font-semibold text-black ")} onClick={() => setFilter("ALL")}>
+              <li
+                className={"cursor-pointer mr-4 text-[#736E7E] hover:text-slate-400 " + (filter == "ALL" && " cursor-default font-semibold text-black hover:text-black ")}
+                onClick={() => setFilter("ALL")}
+              >
                 Latest
               </li>
-              <li className={"cursor-pointer mr-4 text-[#736E7E]  " + (filter == "PROJECTS" && " font-semibold text-black ")} onClick={() => setFilter("PROJECTS")}>
+              <li
+                className={"cursor-pointer mr-4 text-[#736E7E] hover:text-slate-400  " + (filter == "PROJECTS" && " font-semibold text-black cursor-default hover:text-black ")}
+                onClick={() => setFilter("PROJECTS")}
+              >
                 Projects
               </li>
-              <li className={"cursor-pointer text-[#736E7E] " + (filter == "BLOG" && " font-semibold text-black ")} onClick={() => setFilter("BLOG")}>
+              <li
+                className={"cursor-pointer text-[#736E7E] hover:text-slate-400 " + (filter == "BLOG" && " font-semibold text-black hover:text-black cursor-default ")}
+                onClick={() => setFilter("BLOG")}
+              >
                 Blog
               </li>
             </ul>

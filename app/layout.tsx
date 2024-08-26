@@ -1,8 +1,7 @@
 import "./globals.css"
-import { Poppins, Inter, DM_Sans } from "next/font/google"
+import { Poppins, DM_Sans } from "next/font/google"
 import { GeistSans } from "geist/font/sans"
 import { Analytics } from "@vercel/analytics/react"
-import { url } from "inspector"
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -16,12 +15,6 @@ const dm_sans = DM_Sans({
   variable: "--font-dm-sans",
 })
 
-const inter = Inter({
-  subsets: ["latin"],
-  display: "swap",
-  variable: "--font-inter",
-})
-
 export const metadata = {
   title: {
     default: "Daglas Aitsen",
@@ -33,7 +26,7 @@ export const metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body suppressHydrationWarning={true} className={`${GeistSans.variable} ${inter.variable} ${poppins.variable} ${dm_sans.variable}`}>
+      <body suppressHydrationWarning={true} className={`${GeistSans.variable} ${poppins.variable} ${dm_sans.variable}`}>
         {children}
         <Analytics />
       </body>

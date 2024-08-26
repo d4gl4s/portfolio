@@ -55,7 +55,9 @@ section ul {
 
 section li {
   margin-bottom: 0.5em;
-  color: rgb(62, 67, 62);
+  line-height: 1.5em;
+  color: rgb(56, 59, 64);
+  font-family: var(--font-geist-sans);
 }
 
 b {

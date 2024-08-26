@@ -3,10 +3,6 @@ import BlogTitle from "../components/blog/BlogTitle"
 import { projectThumbnails } from "../data/thumbnails"
 import "./blog.css"
 import BlogFooter from "../components/blog/BlogFooter"
-import Head from "next/head"
-import { useState, useEffect } from "react"
-import { ProjectThumbnail } from "../types/types"
-import { title } from "process"
 
 export const metadata: Metadata = {
   title: "NFC technology | Daglas Aitsen",
@@ -127,6 +123,11 @@ const NFC = () => {
           <p>
             The operation of NFC technology is governed by a well-defined protocol stack, which ensures reliable and secure communication between devices. The stack can be divided into three layers:
             Physical, Data Link, and Application.
+          </p>
+          <h3>Physical Layer</h3>
+          <p>
+            The Physical Layer is where the actual transmission of data occurs over the RF field. It involves modulation techniques, encoding schemes, and data rates that define how bits are
+            transferred between devices.
           </p>
           <ul>
             <li>

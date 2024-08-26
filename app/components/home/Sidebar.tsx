@@ -10,7 +10,7 @@ const Sidebar = () => {
           Daglas Aitsen 🌌
         </h1>
         <h2 className=" font-[500]">
-          <span className="description">Hi! My name is Daglas Aitsen. I am in my second year of studying Computer Science at the University of Tartu.</span>
+          <span className="description">Hi! My name is Daglas Aitsen. I am starting my third year of studying Computer Science at the University of Tartu.</span>
           <br />
           <br /> <span className="description">Make sure to check out some of the projects I{"'"}ve had the opportunity to work on!</span>
           <br />
