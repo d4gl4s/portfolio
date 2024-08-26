@@ -1,5 +1,6 @@
 import { FaGithub, FaLinkedin } from "react-icons/fa"
 import { SiLeetcode } from "react-icons/si"
+import { FaXTwitter } from "react-icons/fa6"
 
 const Sidebar = () => {
   return (
@@ -25,6 +26,9 @@ const Sidebar = () => {
         </a>
         <a target="_blank" href="https://leetcode.com/d4gl4s/" rel="noopener noreferrer" className="socials ml-2" aria-label="Check out my LinkedIn profile!">
           <SiLeetcode size={28} color="#222129" />
+        </a>
+        <a target="_blank" href="https://x.com/d4gl4s" rel="noopener noreferrer" className="socials ml-2" aria-label="Check out my X profile!">
+          <FaXTwitter size={28} color="#222129" />
         </a>
       </div>
     </div>
