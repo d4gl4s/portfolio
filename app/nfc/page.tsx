@@ -10,9 +10,10 @@ import { title } from "process"
 
 export const metadata: Metadata = {
   title: "NFC technology | Daglas Aitsen",
-  description: "description",
+  description: "NFC technology: From Radio Waves to Secure Digital Interactions",
   keywords: ["NFC", "Security", "Radio Frequencies"],
   creator: "Daglas Aitsen",
+
   openGraph: {
     type: "website",
     url: "https://daglasaitsen.com/nfc",
