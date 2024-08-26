@@ -1,7 +1,7 @@
 import { Metadata } from "next"
 import BlogTitle from "../components/blog/BlogTitle"
 import { projectThumbnails } from "../data/thumbnails"
-import "../blog.css"
+import "./blog.css"
 import BlogFooter from "../components/blog/BlogFooter"
 import Head from "next/head"
 import { useState, useEffect } from "react"

@@ -36,7 +36,7 @@ export const projectThumbnails: ProjectThumbnail[] = [
     year: 2024,
     url: "/nfc",
     image: "/thumbnails/nfc.png",
-    imageLarge: "thumbnails/nfc.svg",
+    imageLarge: "/thumbnails/nfc_yellow.png",
     imageAuthor: "me",
   },
   /* {
