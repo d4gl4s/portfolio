@@ -10,7 +10,8 @@ import { title } from "process"
 
 export const metadata: Metadata = {
   title: "NFC technology | Daglas Aitsen",
-  description: "NFC technology: From Radio Waves to Secure Digital Interactions",
+  description:
+    "Exploring NFC Technology, this blog post delves into the basics of Near Field Communication, how it operates through different modes, and its use in secure transactions and access control. It also addresses key security concerns and the strategies used to safeguard NFC communications.",
   keywords: ["NFC", "Security", "Radio Frequencies"],
   creator: "Daglas Aitsen",
 
@@ -19,14 +20,16 @@ export const metadata: Metadata = {
     url: "https://daglasaitsen.com/nfc",
     siteName: "daglasaitsen.com",
     title: "NFC technology: From Radio Waves to Secure Digital Interactions",
-    description: "description",
+    description:
+      "Exploring NFC Technology, this blog post delves into the basics of Near Field Communication, how it operates through different modes, and its use in secure transactions and access control. It also addresses key security concerns and the strategies used to safeguard NFC communications.",
   },
   twitter: {
     card: "summary_large_image",
     title: "NFC technology: From Radio Waves to Secure Digital Interactions",
     site: "@d4gl4s",
     creator: "@d4gl4s",
-    description: "Near Field Communication (NFC) is a short-range wireless.",
+    description:
+      "Exploring NFC Technology, this blog post delves into the basics of Near Field Communication, how it operates through different modes, and its use in secure transactions and access control. It also addresses key security concerns and the strategies used to safeguard NFC communications.",
   },
 }
 
