@@ -63,15 +63,15 @@ export const metadata: Metadata = {
     type: "website",
     url: "https://daglasaitsen.com",
     siteName: "daglasaitsen.com",
-    title: "Daglas Aitsen",
-    description: "The personal website of Daglas Aitsen",
+    title: "The simple website of Daglas Aitsen",
+    description: "A website for showcasing projects and sharing thoughts",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Daglas Aitsen",
+    title: "The simple website of Daglas Aitsen",
     site: "@d4gl4s",
     creator: "@d4gl4s",
-    description: "The personal website of Daglas Aitsen",
+    description: "A website for showcasing projects and sharing thoughts",
   },
 }
 
