@@ -30,7 +30,8 @@ export const projectThumbnails: ProjectThumbnail[] = [
     title: "NFC technology: From Radio Waves to Secure Digital Interactions",
     description:
       "Near Field Communication (NFC) is a short-range wireless communication technology that enables seamless communication between devices with a simple tap or wave. This technology is the backbone of many modern conveniences, from the effortless payments we make with our smartphones to the secure access we gain with a single swipe of an NFC-enabled card.",
-    date: new Date(2024, 8, 20),
+    date: new Date("August 20, 2024"),
+    lastModified: new Date("August 26, 2024"),
     type: "BLOG",
     year: 2024,
     url: "/nfc",

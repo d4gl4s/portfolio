@@ -303,7 +303,7 @@ const NFC = () => {
           </p>
         </section>
         <section>
-          <h2>Conclusion</h2>
+          <h2>• Conclusion</h2>
           <p>
             NFC technology combines convenience with security, revolutionizing how we handle payments and access control. From its basics in radio frequency communication and electromagnetic
             induction, we’ve explored how NFC operates through different modes—active, passive, peer-to-peer, and card emulation. Security concerns, including eavesdropping and relay attacks, are
@@ -312,7 +312,7 @@ const NFC = () => {
           </p>
         </section>
       </article>
-      {/* <BlogFooter /> */}
+      <BlogFooter post={post} />
     </main>
   )
 }

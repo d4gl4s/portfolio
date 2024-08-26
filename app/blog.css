@@ -5,12 +5,13 @@
 
 article {
   font-size: 1.05em;
-  font-weight: 400;
+  font-weight: 450;
+  background-color: #fdfdfd;
 }
 
 section h2 {
   font-weight: 500;
-  font-size: 1.6em;
+  font-size: 1.5em;
   margin-bottom: 1.2em;
   line-height: 1.2em;
   font-family: var(--font-dm-sans);
@@ -20,21 +21,29 @@ section h3 {
   font-weight: 700;
   margin-bottom: 0.8em;
   margin-top: 1.8em;
-  font-size: 1.3em;
+  font-size: 1.2em;
+
+  @media (max-width: 1280px) {
+    font-size: 1.1em;
+  }
 }
 
 section h4 {
   font-weight: 700;
-  font-size: 1.2em;
-  margin-bottom: 0.7em;
+  font-size: 1.02em;
+  margin-bottom: 0.8em;
   margin-top: 1.5em;
   font-style: italic;
+
+  @media (max-width: 1280px) {
+    font-size: 1.1em;
+  }
 }
 
 section p {
-  margin-bottom: 1em;
+  margin-bottom: 1.5em;
   line-height: 1.5em;
-  color: rgb(62, 67, 62);
+  color: rgb(56, 59, 64);
   font-family: var(--font-geist-sans);
 }
 
@@ -79,7 +88,7 @@ section {
 }
 
 ::selection {
-  background: #22473e;
+  background: #282c2b;
   color: azure;
 }
 

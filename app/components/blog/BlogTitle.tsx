@@ -3,14 +3,7 @@ import { Content } from "next/font/google"
 import Image from "next/image"
 import ScrollBar from "./ScrollBar"
 import ShareButtons from "./ShareButtons"
-
-const formatDate = (date: Date | undefined) => {
-  if (!date) return ""
-  const day = date.getDate().toString().padStart(2, "0")
-  const month = date.getMonth().toString().padStart(2, "0")
-  const year = date.getFullYear()
-  return `${day}-${month}-${year}`
-}
+import { formatDate } from "@/app/utils/dateUtils"
 
 const BlogTitle = ({ post }: { post: ProjectThumbnail }) => {
   return (
@@ -31,7 +24,7 @@ const BlogTitle = ({ post }: { post: ProjectThumbnail }) => {
           <ShareButtons title={post.title} />
         </div>
         <div className="w-full max-w-[550px]">
-          <Image src={post.imageLarge ? post.imageLarge : post.image} height={900} width={600} alt="Project Thumbnail" className="unselectable" />
+          <Image src={post.imageLarge ? post.imageLarge : post.image} height={900} width={600} alt="Project Thumbnail" className="unselectable rounded" />
           <p className="text-start md:text-end mt-2 text-[0.9em] font-medium text-[#BEC5DE]">
             {post.imageAuthor && "Illustrated by " + post.imageAuthor + " "}
             {post.imageAuthor && post.imageInspiredBy && "inspired by " + post.imageInspiredBy}

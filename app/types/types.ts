@@ -5,6 +5,7 @@ export type LayoutType = "LIST" | "GRID"
 export interface ProjectThumbnail {
   title: string
   date?: Date
+  lastModified?: Date
   type: ProjectType
   year: number
   url: string
